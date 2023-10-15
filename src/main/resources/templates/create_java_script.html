@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0" />
+    <link rel="stylesheet" th:href="@{/create_java_script_style.css}">
+    <title>Java Scripts</title>
+</head>
+<body>
+<section class="hero">
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <a href="">
+                    <img src="images/dexdev_logo.png" alt="">
+                </a>
+            </div>
+            <div class="title">
+                <h1>Java Scripts</h1>
+                <p>A java-based quick notes app.</p>
+            </div>
+        </nav>
+        <div class="form">
+            <div class="form-header">
+                <h1>Add a note</h1>
+                <a th:href="@{/notes/}">
+                    <div>
+                        <h1>></h1>
+                    </div>
+                </a>
+            </div>
+            <div class="form-body">
+                        <div class="form-container">
+                            <form th:action="@{/notes/new}"
+                                  th:object="${javaScriptNew}"
+                                  method="POST">
+                        <label for="">Note</label>
+                        <input type="text" name="note" th:field="*{note}" autocomplete="off">
+
+                        <label for="">Category</label>
+                        <select id="" name="category" th:field="*{category}">
+                            <option value="">Select</option>
+                            <option value="WORK">Work</option>
+                            <option value="REMINDER">Reminder</option>
+                            <option value="TO_DO">To do</option>
+                            <option value="RESEARCH">Research</option>
+                            <option value="PROJECT_IDEA">Project Idea</option>
+                            <option value="WORK_OUT">Work Out</option>
+                            <option value="RANDOM">Random</option>
+                        </select>
+
+                        <input type="submit" value="SAVE NOTE">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
