@@ -1,5 +1,5 @@
-# SPRING BOOT BACKEND APPLICATION FOR UNIVERSIT SETTING
-This is the backend application for a University Management System built using Spring Boot. It provides CRUD functionalities for managing student data.
+# JAVA SCRIPTS 
+Java Scripts is a note-taking application built using Spring Boot, Thymeleaf, and PostgreSQL. It allows users to create, view, edit, and delete notes easily. Its a pun on javascript but it has nothing to do with it. It's just that it is based on Java and you create note, scripts. That is why.
 
 <br>
 
@@ -15,7 +15,6 @@ This is the backend application for a University Management System built using S
 <br>
 
 ### Installation:
-This project includes all of the datasets, graphs, and notebooks that are used in the entire project.
 
 1. **Clone the Repository:** Begin by cloning the project repostory using Git.
 2. **Navigate to the Project Directory:** Go to the project directory using your command prompt or terminal or your file manager.
@@ -31,11 +30,10 @@ Once the application is up and running, it exposes the following RESTful API end
 
 ### API Endpoints
 
-GET     {{base_url}}/       : Get all students.
-GET     {{base_url}}/{id}   : Get a specific student by ID.
-POST    {{base_url}}/       : Create a new student.
-PUT     {{base_url}}/{id}   : Update an existing student.
-DELETE  {{base_url}}/{id}   : Delete a student.
+GET     {{base_url}}/                 : Get all notes.
+POST    {{base_url}}/new              : Create a new note.
+PUT     {{base_url}}/update/{id}      : Update an existing note.
+DELETE  {{base_url}}/delete/{id}      : Delete a note.
 
 <br>
 
@@ -43,17 +41,9 @@ DELETE  {{base_url}}/{id}   : Delete a student.
 The student data structure is as follows:
 
 public class Student {
-    private String studentId;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private String email;
-    private Gender gender;
-    private LocalDate birthday;
-    private String contact;
-    private String barangay;
-    private String city;
-    private Section section;
+    private Long id;
+    private String note;
+    private Category category;
 }
 
 <br>
@@ -65,6 +55,7 @@ public class Student {
 - Maven
 - Hibernate
 - RESTful API
+- Thymeleaf
 - Git
 - PostgreSQL
 - Postman
@@ -77,7 +68,7 @@ public class Student {
 
 If you encounter a bug or have an idea for improvement:
 
-1. **Submit an Issue:** Visit the [issue tracker](https://github.com/dexdevtech/univ-org-backend-design/issues) and create a new issue.
+1. **Submit an Issue:** Visit the [issue tracker](https://github.com/dexdevtech/java-scripts-notes-app/issues) and create a new issue.
 2. **Provide Details:** Clearly describe the problem or feature request.
 3. **Stay Engaged:** Check for updates on your issue.
 
